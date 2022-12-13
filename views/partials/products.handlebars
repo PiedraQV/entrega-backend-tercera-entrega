@@ -1,0 +1,30 @@
+<section class="container py-4 px-2">
+    <form action="/login" method="GET">
+			<div>
+				<input class="btn btn-primary  py-2" type='submit' value='Regresar' />
+			</div>
+	</form>
+	<br>
+	<h3 >Ingresa un producto</h3>
+	<form action="/create-product" method="POST">
+		<div class='mb-3'>
+			<label for='title'>Nombre</label>
+			<input id="name-product" class="form-control" type='text' name='title' />
+		</div>
+		<div class='mb-3'>
+			<label for='price'>Precio</label>
+			<input id="price-product" class="form-control" type='number' name='price' />
+		</div>
+		<div class='mb-3'>
+			<label for='imagePath'>Foto URL</label>
+			<input id="img-product" class="form-control" type='url' name='imagePath' />
+		</div>
+		<div class='mb-3'>
+			<label for='description'>Descripción</label>
+			<input id="img-product" class="form-control" type='text' name='description' />
+		</div>
+		<div class='mb-3'>
+			<input class="btn btn-success" type='submit' value='Enviar' />
+		</div>
+	</form>
+</section>

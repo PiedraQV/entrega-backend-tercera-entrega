@@ -1,0 +1,48 @@
+<h1 class="text-center mb-3">Registrate</h1>
+<section class="row justify-content-center p-3" style="--bs-bg-opacity: .5;">
+	<div class="col-md-6">
+		<form action="/signup" method="POST" class="mb-2">
+			<div class='mb-3'>
+				<input id="name-product" class="form-control" type='email' name='username' placeholder="Email" />
+			</div>
+			<div class='mb-3'>
+				<input id="price-product" class="form-control" type='password' name='password'
+					placeholder="Contraseña" />
+			</div>
+			<div class='mb-3'>
+				<input id="name-product" class="form-control" type='text' name='nombre' placeholder="Ingresa tu nombre" />
+			</div>
+            <div class='mb-3'>
+				<input id="price-product" class="form-control" type='number' name='age'
+					placeholder="Ingresa tu edad" />
+			</div>
+			<div class='mb-3'>
+				<input id="price-product" class="form-control" type='text' name='direccion'
+					placeholder="Ingresa tu direccion" />
+			</div>
+            
+			<div class="d-flex">
+				<div class='mb-1 col-md-3 pl-1'>
+				<input id="price-product" class="form-control" type='number' name='code'
+					placeholder="Código" />
+				</div>
+				<div class='mb-4 col-md-9'>
+				<input id="price-product" class="form-control" type='number' name='telefono'
+					placeholder="Ingresa tu telefono" />
+				</div>
+			</div>
+            <div class='mb-3'>
+				<input id="price-product" class="form-control" type='url' name='image'
+					placeholder="Ingresa una imagen" />
+				</div>
+			<div class='d-flex justify-content-center'>
+				<input class="btn btn-success" type='submit' value='Registrar usuario' />
+			</div>
+		</form>
+		<form action="/redirect-login" method="POST">
+			<div class='d-flex justify-content-center'>
+				<input class="btn btn-primary" type='submit' value='Iniciar sesión' />
+			</div>
+		</form>
+	</div>
+</section>

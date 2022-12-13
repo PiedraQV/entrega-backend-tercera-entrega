@@ -1,0 +1,53 @@
+{{#if products}}
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="list-group">
+                <form action="/login" method="GET">
+	                    	<div>
+	                    		<input class="btn btn-primary " type='submit' value='Regresar' />
+	                    	</div>
+	            </form>
+                <br>
+                {{#each products }}
+                {{#each this}}
+                    <div class="d-flex list-group-item border">
+                       <div class="col-4">
+                         <img src={{ this.imagePath }} class="px-2" style="width: 70px" alt={{ this.title }}>
+                        <strong>{{ this.title }}</strong>
+                        <span >$ {{ this.price }}</span>
+                       </div>
+                        <div class="btn-group justify-content-between align-items-right">
+                                <a class="m-2"  href="cart/reduce/{{ this._id }}">Eliminar</a>
+                                <a class="m-2" href="cart/remove/{{ this._id }}">Remove All</a>
+                        </div>
+                        <span class="total">{{ this.qty }}</span>
+                    </div>
+                {{/each}}
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <strong>Total: {{ totalPrice }}</strong>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <a href="/checkout" class="btn btn-raised  btn-success">Checkout</a>
+        </div>
+    </div>
+{{else}}
+    <div class="empty">
+        <form action="/login" method="GET">
+			<div>
+				<input class="btn btn-success " type='submit' value='Regresar' />
+			</div>
+		</form>
+        <h2>Oops, your cart is empty</h2>
+    </div>
+{{/if}}
